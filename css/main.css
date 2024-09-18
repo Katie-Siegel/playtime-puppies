@@ -9,7 +9,6 @@ body {
   max-width: 1200px;
 }
 
-
 header,
 main,
 footer {
@@ -51,7 +50,7 @@ header .donate-link {
   background: #a40b28;
   padding: 10px 30px;
   color: white;
-  /* add align-self; flex-end; to overwrite align-items: center; from the parent container */
+  align-self: flex-end;
   border-radius: 5px;
 }
 
@@ -198,7 +197,6 @@ footer img {
 /* End Footer Section */
 
 @media (min-width: 768px) {
-
   h1 {
     font-size: 3rem;
   }
@@ -210,20 +208,19 @@ footer img {
   }
 
   .main-content-wrapper {
-    /* Add flex-grow: 1; so that the main-content-wrapper fills up any extra space in the parent container. */
+    flex-grow: 1;
     width: 55%;
   }
 
   aside {
-    width: 300px;
-    /* Add flex: 0 0 300px; so that the sidebar doesn't shrink below the optimum width of 300px. */
-    /* Add align-self: flex-start; to overwrite the default align-items' value of stretch. */
+    /*width: 300px;*/
+    flex: 0 0 300px;
+    align-self: flex-start;
   }
 
   footer img {
     width: 25%;
   }
-
 }
 
 @media (min-width: 1024px) {
@@ -234,14 +231,13 @@ footer img {
 
   .about-text {
     width: 50%;
-    /* Change the placement of the text by adding order: 1; */
+    order: 1;
   }
 
   .about-image {
     width: 50%;
-    /* Change the placement of the image by adding order: 2; */
+    order: 2;
   }
-
 }
 
 @media (min-width: 1200px) {
@@ -262,6 +258,6 @@ footer img {
   }
 
   .program p {
-    /* Add flex-grow: 1; so that the extra space within the card is below the paragraph instead of below the link. */
+    flex-grow: 1;
   }
 }
